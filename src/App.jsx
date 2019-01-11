@@ -7,7 +7,7 @@ const App = () => {
 	const { time } = state;
 	const { border } = stateBorder;
 
-	const currentTime = function() {
+	const currentTime = () => {
 		setState({ time: new Date() });
 	};
 
@@ -15,7 +15,7 @@ const App = () => {
 		setInterval(() => currentTime(), 1000);
 	}, []);
 
-	const toggleDate = function() {
+	const toggleDate = () => {
 		setBorder({ border: !border });
 	};
 
